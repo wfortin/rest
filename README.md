@@ -32,9 +32,9 @@ Update (replace) the resource <br/>
 Create a resource with a specific id <br/>
 All fields must be given (no merge) <br/>
 ###### Possible status codes
-Use `200 OK` when returning the updated resource
-Use `201 Created` when the resource is created with a specific id
-Use `204 No content` when no data is returned in the body
+Use `200 OK` when returning the updated resource <br/>
+Use `201 Created` when the resource is created with a specific id <br/>
+Use `204 No content` when no data is returned in the body <br/>
 Use `412 Precondition failed` when he resource is missing some parameters or has invalid values
 
 <br/>
@@ -46,9 +46,9 @@ Only update the fields given (merge)
 >PUT vs PATCH are commonly misused since some older browser did not support PATCH.
 
 ###### Possible status codes
-Use `200 OK` when returning the updated resource
-Use `204 No content` when no data is returned in the body
-Use `412 Precondition failed` when the resource is missing some parameters or has invalid values
+Use `200 OK` when returning the updated resource <br/>
+Use `204 No content` when no data is returned in the body <br/>
+Use `412 Precondition failed` when the resource is missing some parameters or has invalid values <br/>
 
 <br/>
 ##### `DELETE` /users
@@ -59,8 +59,8 @@ Probably should not be implemented
 ---
 Delete the resource
 ###### Possible status codes
-Use `204 No content` when the delete is synchronous and successful
-Use `200 Accepted` when the delete will be asynchronous and the resource has been flagged as deleted but is not yet deleted
+Use `204 No content` when the delete is synchronous and successful <br/>
+Use `200 Accepted` when the delete will be asynchronous and the resource has been flagged as deleted but is not yet deleted <br/>
 Use `200 OK` when returning information aboout the deleted resource
 
 For more sophiticated use cases refer to : [MDN HTTP Response Code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Response_codes)
