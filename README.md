@@ -1,5 +1,5 @@
 # rest
-RESTful API cheat sheat
+RESTful API cheat sheet
 
 ### `GET` /users
 ---
