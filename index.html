@@ -13,16 +13,23 @@
     <section class="page-header">
       <h1 class="project-name">REST</h1>
       <h2 class="project-tagline">RESTful API cheat sheat</h2>
-      <a href="https://github.com/wfortin/rest/edit/master/README.md" class="btn">Edit on GitHub</a>
+      <a href="https://github.com/wfortin/rest" class="btn">View on GitHub</a>
+      <a href="https://github.com/wfortin/rest/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/wfortin/rest/tarball/master" class="btn">Download .tar.gz</a>
     </section>
 
     <section class="main-content">
-      <h3>
+      <h1>
+<a id="rest" class="anchor" href="#rest" aria-hidden="true"><span class="octicon octicon-link"></span></a>rest</h1>
+
+<p>RESTful API cheat sheat</p>
+
+<h3>
 <a id="get-users" class="anchor" href="#get-users" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>GET</code> /users</h3>
 
 <hr>
 
-<p>Collection of ressources <br> Represented as an array</p>
+<p>Collection of ressource <br> Represented as an array</p>
 
 <h4>
 <a id="possible-status-codes" class="anchor" href="#possible-status-codes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Possible status codes</h4>
@@ -36,7 +43,8 @@
 
 <hr>
 
-<p>Single resource by id</p>
+<p>Single resource by id
+Return the URI to the newly created resource in <code>Location</code> header</p>
 
 <h4>
 <a id="possible-status-codes-1" class="anchor" href="#possible-status-codes-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Possible status codes</h4>
@@ -57,21 +65,17 @@ Use <code>404 Not found</code> when the resource with id :id does not exist</p>
 <a id="possible-status-codes-2" class="anchor" href="#possible-status-codes-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Possible status codes</h4>
 
 <p>Use <code>201 Created</code> when the resource was created successfully - Body includes the full resource with id <br>
-Use <code>412 Precondition failed</code> when the resource is missing some parameters or has invalid values</p>
+Use <code>400 Bad Request</code> when the resource is missing some parameters or has invalid values</p>
 
 <p><br></p>
 
 <h3>
 <a id="put-usersid" class="anchor" href="#put-usersid" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>PUT</code> /users/:id</h3>
 
-<h3>
-<a id="put-users" class="anchor" href="#put-users" aria-hidden="true"><span class="octicon octicon-link"></span></a><code>PUT</code> /users</h3>
-
 <hr>
 
-<p>Update (replace) the resource <br>
-Create a resource with a specific id <br>
-All fields must be given (no merge) <br></p>
+<p>Update the resource <br>
+Create a resource with a specific id</p>
 
 <h4>
 <a id="possible-status-codes-3" class="anchor" href="#possible-status-codes-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Possible status codes</h4>
@@ -79,7 +83,8 @@ All fields must be given (no merge) <br></p>
 <p>Use <code>200 OK</code> when returning the updated resource <br>
 Use <code>201 Created</code> when the resource is created with a specific id <br>
 Use <code>204 No content</code> when no data is returned in the body <br>
-Use <code>412 Precondition failed</code> when he resource is missing some parameters or has invalid values</p>
+Use <code>400 Bad Request</code> when he resource is missing some parameters or has invalid values <br>
+Use <code>404 Not found</code> when the resource with id :id does not exist</p>
 
 <p><br></p>
 
@@ -88,19 +93,10 @@ Use <code>412 Precondition failed</code> when he resource is missing some parame
 
 <hr>
 
-<p>Partially update the resource <br>
-Only update the fields given (merge)</p>
-
 <blockquote>
-<p>PUT vs PATCH are commonly misused since some older browser did not support PATCH.</p>
+<p><code>PATCH</code> should be used when partialy updating the resource. <br>
+We dont use <code>PATCH</code> since some browsers, REST clients and proxys do not correctly support <code>PATCH</code></p>
 </blockquote>
-
-<h4>
-<a id="possible-status-codes-4" class="anchor" href="#possible-status-codes-4" aria-hidden="true"><span class="octicon octicon-link"></span></a>Possible status codes</h4>
-
-<p>Use <code>200 OK</code> when returning the updated resource <br>
-Use <code>204 No content</code> when no data is returned in the body <br>
-Use <code>412 Precondition failed</code> when the resource is missing some parameters or has invalid values <br></p>
 
 <p><br></p>
 
@@ -120,13 +116,23 @@ Probably should not be implemented</p>
 <p>Delete the resource</p>
 
 <h4>
-<a id="possible-status-codes-5" class="anchor" href="#possible-status-codes-5" aria-hidden="true"><span class="octicon octicon-link"></span></a>Possible status codes</h4>
+<a id="possible-status-codes-4" class="anchor" href="#possible-status-codes-4" aria-hidden="true"><span class="octicon octicon-link"></span></a>Possible status codes</h4>
 
 <p>Use <code>204 No content</code> when the delete is synchronous and successful <br>
-Use <code>200 Accepted</code> when the delete will be asynchronous and the resource has been flagged as deleted but is not yet deleted <br>
-Use <code>200 OK</code> when returning information about the deleted resource</p>
+Use <code>202 Accepted</code> when the delete will be asynchronous and the resource has been flagged as deleted but is not yet deleted <br>
+Use <code>200 OK</code> when returning information about the deleted resource
+Use <code>404 Not found</code> when the resource with id :id does not exist</p>
 
-<p>For more sophiticated use cases refer to : <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Response_codes">MDN HTTP Response Code</a></p>
+<h2>
+<a id="cant-find-your-use-case-" class="anchor" href="#cant-find-your-use-case-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Can't find your use case ?</h2>
+
+<p>For more sophisticated use cases refer to : <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Response_codes">MDN HTTP Response Code</a></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/wfortin/rest">REST</a> is maintained by <a href="https://github.com/wfortin">wfortin</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
 
     </section>
 
