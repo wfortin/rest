@@ -8,6 +8,7 @@ Collection of ressources <br/> Represented as an array
 ###### Possible status codes
 Use `200 OK` when the collection exists
 
+<br/>
 ##### `GET` /users/:id
 ---
 Single resource by id
@@ -15,6 +16,7 @@ Single resource by id
 Use `200 OK` when the resource exists <br/>
 Use `404 Not found` when the resource with id :id does not exist
 
+<br/>
 ##### `POST` /users
 ---
 Create resource
@@ -22,7 +24,9 @@ Create resource
 Use `201 Created` when the resource was created successfully - Body includes the full resource with id <br/>
 Use `412 Precondition failed` when the resource is missing some parameters or has invalid values
 
-##### `PUT` /users/:id - `PUT` /users 
+<br/>
+##### `PUT` /users/:id 
+##### `PUT` /users 
 ---
 Update (replace) the resource <br/>
 Create a resource with a specific id <br/>
@@ -33,6 +37,7 @@ Use `201 Created` when the resource is created with a specific id
 Use `204 No content` when no data is returned in the body
 Use `412 Precondition failed` when he resource is missing some parameters or has invalid values
 
+<br/>
 ##### `PATCH` /users/:id
 ---
 Partially update the resource <br/>
@@ -45,6 +50,7 @@ Use `200 OK` when returning the updated resource
 Use `204 No content` when no data is returned in the body
 Use `412 Precondition failed` when the resource is missing some parameters or has invalid values
 
+<br/>
 ##### `DELETE` /users
 ---
 Delete the collection <br/>
