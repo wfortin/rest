@@ -24,8 +24,7 @@ Use `201 Created` when the resource was created successfully - Body includes the
 Use `412 Precondition failed` when the resource is missing some parameters or has invalid values
 
 <br/>
-### `PUT` /users/:id 
-### `PUT` /users 
+### `PUT` /users/:id
 ---
 Update (replace) the resource <br/>
 Create a resource with a specific id <br/>
@@ -59,7 +58,7 @@ Probably should not be implemented
 Delete the resource
 #### Possible status codes
 Use `204 No content` when the delete is synchronous and successful <br/>
-Use `200 Accepted` when the delete will be asynchronous and the resource has been flagged as deleted but is not yet deleted <br/>
+Use `202 Accepted` when the delete will be asynchronous and the resource has been flagged as deleted but is not yet deleted <br/>
 Use `200 OK` when returning information about the deleted resource
 
 For more sophiticated use cases refer to : [MDN HTTP Response Code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Response_codes)
