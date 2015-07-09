@@ -61,6 +61,6 @@ Delete the resource
 ###### Possible status codes
 Use `204 No content` when the delete is synchronous and successful <br/>
 Use `200 Accepted` when the delete will be asynchronous and the resource has been flagged as deleted but is not yet deleted <br/>
-Use `200 OK` when returning information aboout the deleted resource
+Use `200 OK` when returning information about the deleted resource
 
 For more sophiticated use cases refer to : [MDN HTTP Response Code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Response_codes)
