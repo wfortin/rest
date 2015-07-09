@@ -26,9 +26,8 @@ Use `412 Precondition failed` when the resource is missing some parameters or ha
 <br/>
 ### `PUT` /users/:id
 ---
-Update (replace) the resource <br/>
-Create a resource with a specific id <br/>
-All fields must be given (no merge) <br/>
+Update the resource <br/>
+Create a resource with a specific id
 #### Possible status codes
 Use `200 OK` when returning the updated resource <br/>
 Use `201 Created` when the resource is created with a specific id <br/>
@@ -38,10 +37,8 @@ Use `412 Precondition failed` when he resource is missing some parameters or has
 <br/>
 ### `PATCH` /users/:id
 ---
-Partially update the resource <br/>
-Only update the fields given (merge)
-
->PUT vs PATCH are commonly misused since some older browser did not support PATCH.
+> `PATCH` should be used when partialy updating the resource. <br/>
+> We dont use `PATCH` since some browsers, REST clients and proxys do not correctly support `PATH`
 
 #### Possible status codes
 Use `200 OK` when returning the updated resource <br/>
@@ -61,4 +58,4 @@ Use `204 No content` when the delete is synchronous and successful <br/>
 Use `202 Accepted` when the delete will be asynchronous and the resource has been flagged as deleted but is not yet deleted <br/>
 Use `200 OK` when returning information about the deleted resource
 
-For more sophiticated use cases refer to : [MDN HTTP Response Code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Response_codes)
+For more sophisticated use cases refer to : [MDN HTTP Response Code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Response_codes)
