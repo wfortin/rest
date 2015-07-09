@@ -34,7 +34,6 @@ Use `200 OK` when returning the updated resource <br/>
 Use `201 Created` when the resource is created with a specific id <br/>
 Use `204 No content` when no data is returned in the body <br/>
 Use `400 Bad Request` when he resource is missing some parameters or has invalid values <br/>
-Use `404 Not found` when the resource with id :id does not exist
 
 <br/>
 ### `PATCH` /users/:id
