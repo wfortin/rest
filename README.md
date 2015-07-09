@@ -11,7 +11,6 @@ Use `200 OK` when the collection exists
 ### `GET` /users/:id
 ---
 Single resource by id
-Return the URI to the newly created resource in `Location` header
 #### Possible status codes
 Use `200 OK` when the resource exists <br/>
 Use `404 Not found` when the resource with id :id does not exist
@@ -19,7 +18,8 @@ Use `404 Not found` when the resource with id :id does not exist
 <br/>
 ### `POST` /users
 ---
-Create resource
+Create a resource <br/>
+Return the URI to the newly created resource in `Location` header
 #### Possible status codes
 Use `201 Created` when the resource was created successfully - Body includes the full resource with id <br/>
 Use `400 Bad Request` when the resource is missing some parameters or has invalid values
