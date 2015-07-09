@@ -56,4 +56,5 @@ Use `202 Accepted` when the delete will be asynchronous and the resource has bee
 Use `200 OK` when returning information about the deleted resource
 Use `404 Not found` when the resource with id :id does not exist
 
+## Can't find your use case ?
 For more sophisticated use cases refer to : [MDN HTTP Response Code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Response_codes)
