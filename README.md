@@ -33,18 +33,14 @@ Create a resource with a specific id
 Use `200 OK` when returning the updated resource <br/>
 Use `201 Created` when the resource is created with a specific id <br/>
 Use `204 No content` when no data is returned in the body <br/>
-Use `400 Bad Request` when he resource is missing some parameters or has invalid values
+Use `400 Bad Request` when he resource is missing some parameters or has invalid values <br/>
+Use `404 Not found` when the resource with id :id does not exist
 
 <br/>
 ### `PATCH` /users/:id
 ---
 > `PATCH` should be used when partialy updating the resource. <br/>
-> We dont use `PATCH` since some browsers, REST clients and proxys do not correctly support `PATH`
-
-#### Possible status codes
-Use `200 OK` when returning the updated resource <br/>
-Use `204 No content` when no data is returned in the body <br/>
-Use `400 Bad Request` when the resource is missing some parameters or has invalid values <br/>
+> We dont use `PATCH` since some browsers, REST clients and proxys do not correctly support `PATCH`
 
 <br/>
 ### `DELETE` /users
@@ -58,5 +54,6 @@ Delete the resource
 Use `204 No content` when the delete is synchronous and successful <br/>
 Use `202 Accepted` when the delete will be asynchronous and the resource has been flagged as deleted but is not yet deleted <br/>
 Use `200 OK` when returning information about the deleted resource
+Use `404 Not found` when the resource with id :id does not exist
 
 For more sophisticated use cases refer to : [MDN HTTP Response Code](https://developer.mozilla.org/en-US/docs/Web/HTTP/Response_codes)
