@@ -11,6 +11,7 @@ Use `200 OK` when the collection exists
 ### `GET` /users/:id
 ---
 Single resource by id
+Return the URI to the newly created resource in `Location` header
 #### Possible status codes
 Use `200 OK` when the resource exists <br/>
 Use `404 Not found` when the resource with id :id does not exist
@@ -21,7 +22,7 @@ Use `404 Not found` when the resource with id :id does not exist
 Create resource
 #### Possible status codes
 Use `201 Created` when the resource was created successfully - Body includes the full resource with id <br/>
-Use `412 Precondition failed` when the resource is missing some parameters or has invalid values
+Use `400 Bad Request` when the resource is missing some parameters or has invalid values
 
 <br/>
 ### `PUT` /users/:id
@@ -32,7 +33,7 @@ Create a resource with a specific id
 Use `200 OK` when returning the updated resource <br/>
 Use `201 Created` when the resource is created with a specific id <br/>
 Use `204 No content` when no data is returned in the body <br/>
-Use `412 Precondition failed` when he resource is missing some parameters or has invalid values
+Use `400 Bad Request` when he resource is missing some parameters or has invalid values
 
 <br/>
 ### `PATCH` /users/:id
@@ -43,7 +44,7 @@ Use `412 Precondition failed` when he resource is missing some parameters or has
 #### Possible status codes
 Use `200 OK` when returning the updated resource <br/>
 Use `204 No content` when no data is returned in the body <br/>
-Use `412 Precondition failed` when the resource is missing some parameters or has invalid values <br/>
+Use `400 Bad Request` when the resource is missing some parameters or has invalid values <br/>
 
 <br/>
 ### `DELETE` /users
