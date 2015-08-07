@@ -3,7 +3,7 @@ RESTful API cheat sheet
 
 ### `GET` /users
 ---
-Collection of ressource <br/> Represented as an array
+Collection of resource <br/> Represented as an array
 #### Possible status codes
 Use `200 OK` when the collection exists
 
